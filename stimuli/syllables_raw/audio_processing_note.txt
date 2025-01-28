@@ -1,0 +1,6 @@
+一致性：
+Amplitude，Duration
+
+实验刺激是audio sequence，即将单个syllable拼接。在实验中播放的声音刺激可参考combined_wav/
+因此，实际的要求是，拼接之后的sequence，在长度一致的情况下（short/long），保持duration一致，且每一个声音出现的位置一致。
+且sequence作为实验刺激，应该避免突然的声音变化带来的非预期刺激。也就是说，声音需有平滑的起止。（拼接的脚本scr\scr03_generate_sequence.py, 使用AudioSegment）
