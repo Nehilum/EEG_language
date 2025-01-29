@@ -31,8 +31,8 @@ import argparse
 # We'll define constant strings for columns that never change
 COL2 = " "
 COL3 = " "
-COL4 = " "
-COL5 = " "
+COL4 = " 4.0"
+COL5 = " 0.05"
 EMPTY_COLS = 3  # number of empty columns
 
 def main():
@@ -98,7 +98,6 @@ def convert_csv_to_order_file(csv_path, txt_path):
             for _ in range(EMPTY_COLS):
                 columns.append("")
             columns.append(wav_file)
-
             line_str = ", ".join(columns)
             f_out.write(line_str + "\n")
 
