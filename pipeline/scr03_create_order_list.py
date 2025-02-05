@@ -55,7 +55,7 @@ STIM_ROOT = os.path.join(PARENT_DIR, "stimuli", "sequences","combined_wav")
 N_ORDERS = 20
 
 # Where to save the final CSVs
-OUTPUT_DIR = os.path.join(PARENT_DIR, "experiment", "order_lists")
+OUTPUT_DIR = os.path.join(PARENT_DIR, "experiment", "short", "order_lists")
 os.makedirs(OUTPUT_DIR, exist_ok=True)
 
 # Grammar list
