@@ -1,0 +1,11 @@
+20250205 (noisy)
+RM: ADR short, rand 2
+
+RN: HDR short, rand 2
+
+20250206
+RR: ADR short, rand 3
+
+RS: ADR long, rand 3, part 1
+
+RT: ADR long, rand 3, part 2
