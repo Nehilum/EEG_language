@@ -109,14 +109,14 @@ def process_csv_file(csv_path, output_subdir, limit_count=None):
 SCRIPT_DIR = os.path.dirname(os.path.abspath(__file__))
 PARENT_DIR = os.path.dirname(SCRIPT_DIR)
 
-SEQUENCES_CSV_DIR = os.path.join(PARENT_DIR, "stimuli", "sequences", "sequences_csv")
-SYLLABLES_PATH    = os.path.join(PARENT_DIR, "stimuli", "processed", "stim_syllables_mono")
-COMBINED_WAV_DIR  = os.path.join(PARENT_DIR, "stimuli", "sequences","combined_wav_mono")
+SEQUENCES_CSV_DIR = os.path.join(PARENT_DIR, "stimuli_replacement_fixpos", "sequences", "sequences_csv")
+SYLLABLES_PATH    = os.path.join(PARENT_DIR, "stimuli_replacement", "processed", "stim_syllables_mono")
+COMBINED_WAV_DIR  = os.path.join(PARENT_DIR, "stimuli_replacement_fixpos", "sequences","combined_wav_mono")
 
 def main():
     grammars = ['ADR','HDR']
     lengths = ['short','long']
-    violation_types = ['replacement','concatenation']
+    violation_types = ['replacement'] #,'concatenation']
 
     # 先处理 grammatical
     for g in grammars:

@@ -161,9 +161,9 @@ def generate_ungrammatical_sequences(grammar: str, seq_length: str, violation_ty
 
     # short => tail pos in [-2, -1], long => [-3, -2, -1]
     if seq_length == 'short':
-        tail_positions = [-2, -1]
+        tail_positions = [-2] #, -1]
     else:
-        tail_positions = [-3, -2, -1]
+        tail_positions = [-3] #, -2, -1]
 
     for (pattern_str, seq, _) in base_samples:  # we can ignore the 0 from the grammatical
         seq_copy = seq[:]
@@ -219,7 +219,7 @@ def save_sequences_to_csv(csv_filename, data):
     """
     current_dir = os.getcwd()
     parent_dir = os.path.dirname(current_dir)
-    out_folder = os.path.join(parent_dir, "stimuli", "sequences", "sequences_csv")
+    out_folder = os.path.join(parent_dir, "stimuli_replacement_fixpos", "sequences", "sequences_csv")
     os.makedirs(out_folder, exist_ok=True)
 
     outpath = os.path.join(out_folder, csv_filename)
@@ -252,7 +252,7 @@ def main():
 
     grammars = ['ADR','HDR']
     lengths = ['short','long']
-    violation_types = ['replacement','concatenation']
+    violation_types = ['replacement'] #,'concatenation']
 
     for g in grammars:
         for l in lengths:
@@ -263,11 +263,11 @@ def main():
 
             # B) Ungrammatical
             for v in violation_types:
-                ungram_data = generate_ungrammatical_sequences(g, l, v, sample_size=50)
+                ungram_data = generate_ungrammatical_sequences(g, l, v, sample_size=100)
                 fname_u = f"{g}_{v}_{l}.csv"
                 save_sequences_to_csv(fname_u, ungram_data)
 
-    print("All CSV (12 types) have been saved under 'stimuli/sequences/sequences_csv'.")
+    print("All CSV (12 types) have been saved under 'stimuli_replacement_fixpos/sequences/sequences_csv'.")
 
 
 if __name__ == "__main__":

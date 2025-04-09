@@ -37,16 +37,16 @@ PARENT_DIR = os.path.dirname(SCRIPT_DIR)
 
 # Root folder that contains subfolders like "ADR_short_grammatical",
 # "HDR_long_concatenation", etc., each with .wav files.
-STIM_ROOT = os.path.join(PARENT_DIR, "stimuli", "sequences","combined_wav")
+STIM_ROOT = os.path.join(PARENT_DIR, "stimuli_replacement_fixpos", "sequences","combined_wav_mono")
 
 # The CSV folder produced by generate_sequence_list.py
-SEQUENCES_CSV_DIR = os.path.join(PARENT_DIR, "stimuli", "sequences","sequences_csv")
+SEQUENCES_CSV_DIR = os.path.join(PARENT_DIR, "stimuli_replacement_fixpos", "sequences","sequences_csv")
 
 # We'll produce 20 random orders per grammar
 N_ORDERS = 20
 
 # Where to save the final CSVs
-OUTPUT_DIR = os.path.join(PARENT_DIR, "experiment", "order_lists", "long")
+OUTPUT_DIR = os.path.join(PARENT_DIR, "experiment_replacement_fixpos", "order_lists", "long")
 os.makedirs(OUTPUT_DIR, exist_ok=True)
 
 # Grammar list
@@ -54,7 +54,7 @@ GRAMMARS = ["ADR","HDR"]
 
 # We'll define the subfolder name pattern as: f"{grammar}_{length}_{category}"
 LENGTHS = ["long"]  # if you also need long, add "long" here
-CATEGORIES = ["grammatical","replacement","concatenation"]
+CATEGORIES = ["grammatical","replacement"] #,"concatenation"]
 
 # The total expected counts for each (length, category).
 NEEDED_TOTAL = {
@@ -62,8 +62,8 @@ NEEDED_TOTAL = {
     ("long","grammatical"): 384,
     ("short","replacement"): 12,
     ("short","concatenation"): 12,
-    ("long","replacement"): 48,
-    ("long","concatenation"): 48,
+    ("long","replacement"): 96,
+    # ("long","concatenation"): 48,
 }
 
 
@@ -231,7 +231,7 @@ def main():
             session1_rows = []
             for i, (fname, cond, pos) in enumerate(session1_list, start=1):
                  # 在这儿打印一下
-                print(f"[Debug] final (fname={fname}, cond={cond}, pos={pos})")
+                # print(f"[Debug] final (fname={fname}, cond={cond}, pos={pos})")
                 row = {
                     "trial_index": i,
                     "audio_filename": fname,  # e.g. "ADR_short_concatenation/A1_e_b.wav"

@@ -136,7 +136,7 @@ def generate_grammatical_sequences(grammar: str, seq_length: str):
 # 4) Generate UNGRAMMATICAL sequences
 #    returns list of (patternStr, [filename1, filename2, ...])
 # ---------------------------------------------------------
-def generate_ungrammatical_sequences(grammar: str, seq_length: str, violation_type: str, sample_size=50):
+def generate_ungrammatical_sequences(grammar: str, seq_length: str, violation_type: str, sample_size=100):
     """
     Minimal random generation of ungrammatical sequences.
     We use the same patternStr from the original grammar pattern, but we break 1 position
@@ -214,7 +214,7 @@ def save_sequences_to_csv(csv_filename, data):
     """
     current_dir = os.getcwd()
     parent_dir = os.path.dirname(current_dir)
-    out_folder = os.path.join(parent_dir, "stimuli", "sequences", "sequences_csv")
+    out_folder = os.path.join(parent_dir, "stimuli_replacement", "sequences", "sequences_csv")
     os.makedirs(out_folder, exist_ok=True)
 
     outpath = os.path.join(out_folder, csv_filename)
@@ -245,8 +245,8 @@ def main():
 
     grammars = ['ADR','HDR']
     lengths = ['short','long']
-    violation_types = ['replacement','concatenation']
-
+    # violation_types = ['replacement','concatenation']
+    violation_types = ['replacement']
     for g in grammars:
         for l in lengths:
             # A) Grammatical
@@ -256,7 +256,7 @@ def main():
 
             # B) Ungrammatical
             for v in violation_types:
-                ungram_data = generate_ungrammatical_sequences(g, l, v, sample_size=50)
+                ungram_data = generate_ungrammatical_sequences(g, l, v, sample_size=100)
                 fname_u = f"{g}_{v}_{l}.csv"
                 save_sequences_to_csv(fname_u, ungram_data)
 
