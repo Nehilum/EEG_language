@@ -1,0 +1,153 @@
+pattern,seqID,category,length,position
+AAAAAAAAAAAAAAAA,seq_0001,Repetition,16,0
+AAAAAAAABAAAAAAA,seq_0002,Repetition,16,9
+AAAAAAAAAAABAAAA,seq_0003,Repetition,16,12
+AAAAAAAAAAAABAAA,seq_0004,Repetition,16,13
+AAAAAAAAAAAAAABA,seq_0005,Repetition,16,15
+AAAAAAAAAAAA,seq_0006,Repetition,12,0
+AAAAAABAAAAA,seq_0007,Repetition,12,7
+AAAAAAABAAAA,seq_0008,Repetition,12,8
+AAAAAAAAABAA,seq_0009,Repetition,12,10
+AAAAAAAAAABA,seq_0010,Repetition,12,11
+AAAAAAAA,seq_0011,Repetition,8,0
+AAAABAAA,seq_0012,Repetition,8,5
+AAAAABAA,seq_0013,Repetition,8,6
+AAAAAABA,seq_0014,Repetition,8,7
+AAAAAAAB,seq_0015,Repetition,8,8
+AAAAAA,seq_0016,Repetition,6,0
+AAABAA,seq_0017,Repetition,6,4
+AAAABA,seq_0018,Repetition,6,5
+AAAAAB,seq_0019,Repetition,6,6
+AAAA,seq_0020,Repetition,4,0
+AABA,seq_0021,Repetition,4,3
+AAAB,seq_0022,Repetition,4,4
+ABABABABABABABAB,seq_0023,Alternation,16,0
+ABABABABBBABABAB,seq_0024,Alternation,16,9
+ABABABABABAAABAB,seq_0025,Alternation,16,12
+ABABABABABABAAAB,seq_0026,Alternation,16,14
+ABABABABABABABBB,seq_0027,Alternation,16,15
+ABABABABABAB,seq_0028,Alternation,12,0
+ABABABBBABAB,seq_0029,Alternation,12,7
+ABABABAAABAB,seq_0030,Alternation,12,8
+ABABABABAAAB,seq_0031,Alternation,12,10
+ABABABABABBB,seq_0032,Alternation,12,11
+ABABABAB,seq_0033,Alternation,8,0
+ABABBBAB,seq_0034,Alternation,8,5
+ABABAAAB,seq_0035,Alternation,8,6
+ABABABBB,seq_0036,Alternation,8,7
+ABABABAA,seq_0037,Alternation,8,8
+ABABAB,seq_0038,Alternation,6,0
+ABAAAB,seq_0039,Alternation,6,4
+ABABBB,seq_0040,Alternation,6,5
+ABABAA,seq_0041,Alternation,6,6
+ABAB,seq_0042,Alternation,4,0
+ABBB,seq_0043,Alternation,4,3
+ABAA,seq_0044,Alternation,4,4
+AABBAABBAABBAABB,seq_0045,Pairs,16,0
+AABBAABBABBBAABB,seq_0046,Pairs,16,10
+AABBAABBAAABAABB,seq_0047,Pairs,16,11
+AABBAABBAABBABBB,seq_0048,Pairs,16,14
+AABBAABBAABBAAAB,seq_0049,Pairs,16,15
+AABBAABBAABB,seq_0050,Pairs,12,0
+AABBAABAAABB,seq_0051,Pairs,12,8
+AABBAABBBABB,seq_0052,Pairs,12,9
+AABBAABBABBB,seq_0053,Pairs,12,10
+AABBAABBAAAB,seq_0054,Pairs,12,11
+AABBAABB,seq_0055,Pairs,8,0
+AABBBABB,seq_0056,Pairs,8,5
+AABBABBB,seq_0057,Pairs,8,6
+AABBAAAB,seq_0058,Pairs,8,7
+AABBAABA,seq_0059,Pairs,8,8
+AABBAA,seq_0060,Pairs,6,0
+AABAAA,seq_0061,Pairs,6,4
+AABBBA,seq_0062,Pairs,6,5
+AABBAB,seq_0063,Pairs,6,6
+AABB,seq_0064,Pairs,4,0
+AAAB,seq_0065,Pairs,4,3
+AABA,seq_0066,Pairs,4,4
+AAAABBBBAAAABBBB,seq_0067,Quadruplets,16,0
+AAAABBBBBAAABBBB,seq_0068,Quadruplets,16,9
+AAAABBBBAAABBBBB,seq_0069,Quadruplets,16,12
+AAAABBBBAAAAABBB,seq_0070,Quadruplets,16,13
+AAAABBBBAAAABBAB,seq_0071,Quadruplets,16,15
+AAAABBBBAAAA,seq_0072,Quadruplets,12,0
+AAAABBABAAAA,seq_0073,Quadruplets,12,7
+AAAABBBAAAAA,seq_0074,Quadruplets,12,8
+AAAABBBBBAAA,seq_0075,Quadruplets,12,9
+AAAABBBBAABA,seq_0076,Quadruplets,12,11
+AAAABBBB,seq_0077,Quadruplets,8,0
+AAAAABBB,seq_0078,Quadruplets,8,5
+AAAABABB,seq_0079,Quadruplets,8,6
+AAAABBAB,seq_0080,Quadruplets,8,7
+AAAABBBA,seq_0081,Quadruplets,8,8
+AAABBB,seq_0082,Triplets,6,0
+AAAABB,seq_0083,Triplets,6,4
+AAABAB,seq_0084,Triplets,6,5
+AAABBA,seq_0085,Triplets,6,6
+AABBABABAABBABAB,seq_0086,Pairs and alternation 1,16,0
+AABBABABABBBABAB,seq_0087,Pairs and alternation 1,16,10
+AABBABABAAABABAB,seq_0088,Pairs and alternation 1,16,11
+AABBABABAABBAAAB,seq_0089,Pairs and alternation 1,16,14
+AABBABABAABBABBB,seq_0090,Pairs and alternation 1,16,15
+AABBABABAABB,seq_0091,Pairs and alternation 1,12,0
+AABBABABABBB,seq_0092,Pairs and alternation 1,12,10
+AABBABABAAAB,seq_0093,Pairs and alternation 1,12,11
+AABBAAABAABB,seq_0094,Pairs and alternation 1,12,6
+AABBABBBAABB,seq_0095,Pairs and alternation 1,12,7
+AABBABAB,seq_0096,Pairs and alternation 1,8,0
+AABBBBAB,seq_0097,Pairs and alternation 1,8,5
+AABBAAAB,seq_0098,Pairs and alternation 1,8,6
+AABBABBB,seq_0099,Pairs and alternation 1,8,7
+AABBABAA,seq_0100,Pairs and alternation 1,8,8
+AAAABBBBAABBABAB,seq_0101,Shrinking,16,0
+AAAABBBBABBBABAB,seq_0102,Shrinking,16,10
+AAAABBBBAAABABAB,seq_0103,Shrinking,16,11
+AAAABBBBAABBAAAB,seq_0104,Shrinking,16,14
+AAAABBBBAABBABBB,seq_0105,Shrinking,16,15
+AAABBBAABBAB,seq_0106,Shrinking,12,0
+AAABBBABBBAB,seq_0107,Shrinking,12,8
+AAABBBAAABAB,seq_0108,Shrinking,12,9
+AAABBBAABAAB,seq_0109,Shrinking,12,10
+AAABBBAABBBB,seq_0110,Shrinking,12,11
+ABAABBABABAABBAB,seq_0111,Pairs and alternation 2,16,0
+ABAABBABAAAABBAB,seq_0112,Pairs and alternation 2,16,10
+ABAABBABABABBBAB,seq_0113,Pairs and alternation 2,16,12
+ABAABBABABAAABAB,seq_0114,Pairs and alternation 2,16,13
+ABAABBABABAABBBB,seq_0115,Pairs and alternation 2,16,15
+ABAABBABABAA,seq_0116,Pairs and alternation 2,12,0
+ABAABBBBABAA,seq_0117,Pairs and alternation 2,12,7
+ABAABBAAABAA,seq_0118,Pairs and alternation 2,12,8
+ABAABBABAAAA,seq_0119,Pairs and alternation 2,12,10
+ABAABBABABBA,seq_0120,Pairs and alternation 2,12,11
+AAAABBABABAABBBB,seq_0121,Center mirror,16,0
+AAAABBABBBAABBBB,seq_0122,Center mirror,16,9
+AAAABBABABABBBBB,seq_0123,Center mirror,16,12
+AAAABBABABAAABBB,seq_0124,Center mirror,16,13
+AAAABBABABAABBAB,seq_0125,Center mirror,16,15
+AAABBABAABBB,seq_0126,Center mirror,12,0
+AAABBAAAABBB,seq_0127,Center mirror,12,7
+AAABBABABBBB,seq_0128,Center mirror,12,9
+AAABBABAAABB,seq_0129,Center mirror,12,10
+AAABBABAABAB,seq_0130,Center mirror,12,11
+ABBA,seq_0131,xxx,4,0
+ABAA,seq_0132,xxx,4,3
+ABBB,seq_0133,xxx,4,4
+ABAAABBBBABBAAAB,seq_0134,Random control,16,0
+ABAAABBBAABBAAAB,seq_0135,Random control,16,9
+ABAAABBBBABAAAAB,seq_0136,Random control,16,12
+ABAAABBBBABBABAB,seq_0137,Random control,16,14
+ABAAABBBBABBAABB,seq_0138,Random control,16,15
+BABAABBAABAB,seq_0139,Random control,12,0
+BABAABAAABAB,seq_0140,Random control,12,7
+BABAABBABBAB,seq_0141,Random control,12,9
+BABAABBAAAAB,seq_0142,Random control,12,10
+BABAABBAABBB,seq_0143,Random control,12,11
+ABBABAAB,seq_0144,Random control,8,0
+ABBAAAAB,seq_0145,Random control,8,5
+ABBABBAB,seq_0146,Random control,8,6
+ABBABABB,seq_0147,Random control,8,7
+ABBABAAA,seq_0148,Random control,8,8
+BAABAB,seq_0149,Random control,6,0
+BAAAAB,seq_0150,Random control,6,4
+BAABBB,seq_0151,Random control,6,5
+BAABAA,seq_0152,Random control,6,6
