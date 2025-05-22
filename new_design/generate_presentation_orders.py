@@ -20,7 +20,10 @@ def generate_multiple_orders(sequence_csv_path, output_root="presentation_orders
 
         standard_pattern = standard_row.iloc[0]["pattern"]
         standard_wav = f"{standard_pattern}.wav"
-        violations = violation_rows["pattern"].tolist()
+        standard_position = 0
+
+        # violation pattern 与 position 映射
+        violations = violation_rows[["pattern", "position"]].to_dict("records")
 
         # 创建输出子目录
         folder_name = f"{category}{length}"
@@ -28,7 +31,6 @@ def generate_multiple_orders(sequence_csv_path, output_root="presentation_orders
         os.makedirs(folder_path, exist_ok=True)
 
         for version in range(1, n_versions + 1):
-            # 固定随机种子，确保每次顺序不同但可复现
             seed_val = sum(ord(c) for c in category) + int(length) + version * 100
             random.seed(seed_val)
 
@@ -36,21 +38,27 @@ def generate_multiple_orders(sequence_csv_path, output_root="presentation_orders
             habituation_trials = [{
                 "trial_index": i + 1,
                 "audio_filename": standard_wav,
-                "condition": "habituation"
+                "condition": "habituation",
+                "position": standard_position
             } for i in range(habituation_n)]
 
-            # Test 阶段：12 standard + 24 violations（平分）
+            # Test 阶段：12 standard + 24 violations
             test_trials = []
+
+            # 12 次 standard
             test_trials.extend([{
                 "audio_filename": standard_wav,
-                "condition": "test"
+                "condition": "standard",
+                "position": standard_position
             }] * 12)
 
+            # violation 平分到 24 次
             repeat_each = 24 // len(violations)
-            for pattern in violations:
+            for viol in violations:
                 test_trials.extend([{
-                    "audio_filename": f"{pattern}.wav",
-                    "condition": "test"
+                    "audio_filename": f"{viol['pattern']}.wav",
+                    "condition": "violation",
+                    "position": viol["position"]
                 }] * repeat_each)
 
             # 打乱并编号
@@ -58,11 +66,11 @@ def generate_multiple_orders(sequence_csv_path, output_root="presentation_orders
             for i, trial in enumerate(test_trials, start=habituation_n + 1):
                 trial["trial_index"] = i
 
-            # 合并全部 trial
+            # 合并所有 trial
             all_trials = habituation_trials + test_trials
             out_df = pd.DataFrame(all_trials)
 
-            # 输出文件名，例如 Alte_session_1.csv
+            # 输出文件名
             base_filename = f"{category[:4]}{length}_session_{version}.csv"
             out_path = os.path.join(folder_path, base_filename)
             out_df.to_csv(out_path, index=False)
